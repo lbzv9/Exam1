@@ -1,0 +1,62 @@
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h4> Restaurant/cafe/canteen</h4>
+        <h4>In London City </h4>
+
+    </div>
+
+    <h2>Your Current Location in London:</h2><input type="text"  id="from"/><br>
+ <a href="#Location"><button id="location1"data-mini="true" data-inline="true">Available Best Restaurant</button></a>
+ <a href="#Weather"><button id="location2" data-mini="true" data-inline="true">Direction Service to Restaurant</button></a>
+ 
+
+    </div>
+</div>
+
+<div data-role="page" id="Location">
+    <div data-role="header">
+         <h1> Location </h1>
+
+        <a data-rel="back" data-icon="home">Home</a>
+</div>
+    
+    
+    <button id="ava">Survey Results </button>
+    <h2>  <div id="write"></div>
+    </h2>
+    <h4><div id="write1"></div></h4>
+    <h4><div id="write3"></div></h4>
+    <h5><div id ="write2"></div></h5>
+           
+    
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script> 
+   <br><br><br>
+<p>1. Other Available restaurants near by:</p>
+<div id="map1"></div> 
+    
+
+
+    </div>
+
+ <div data-role="page" id="Weather">
+    <div data-role="header">
+        
+         <h1> Location </h1>
+
+        <a data-rel="back" data-icon="home">Home</a>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script> 
+<p>1. Current Location:</p>
+<div id="map2"></div> 
+    
+
+
+    <p>Direction Service to the restaurant</p>
+   
+
+  To  : <input type="text" id="to1"><br>
+        
+<button id="button1" data-mini="true" data-inline="true">Show Direction</button><br><br>
+<div id="map_canvas1" style="height: 400px; width: 400px"></div>
+    
+</div>

@@ -1,0 +1,89 @@
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+
+public class Rectxt2Solr {
+	public static void main (String args[]) throws IOException {
+		
+	
+BufferedReader br = null;
+		
+		//String result = "";
+		
+		
+ 
+	
+ 
+			String sCurrentLine;
+			
+			br = new BufferedReader(new FileReader("/home/cloudera/Desktop/test.txt"));
+			FileWriter file = new FileWriter("/home/cloudera/Desktop/rest.json");
+			file.write("[");
+			
+			
+
+
+				for ( int i=1; i<=10; i++)
+				{
+				int count=0;
+				file.write("{");
+ 
+				file.write("\"id\":\"User_"+i);
+
+					while ((sCurrentLine = br.readLine()) != null) {	
+					
+					
+				 
+			
+				
+				
+				
+				//if(sCurrentLine.contains("\t")){
+					
+					String Array1[] = sCurrentLine.split(":");
+					String title = Array1[2];
+					String Array2[] = title.split(",");
+					//String Array[] = title.split(",");
+					//String id = Array[0];
+					//String num = Array[2];
+					//String Array2[]=id.split(": ");
+						
+							if(count>=0&&count<15)
+						{
+						
+							file.write("\",\"title\":\""+Array2[0]);	
+						}
+						if(count>13)
+						{
+							break;
+						}
+						count=count+1;
+							
+					}
+				file.write("\"},");
+
+}
+
+			
+			
+			
+			file.write("]");
+			file.close();
+}
+			
+	}
+
+			
+		
+    
+		
+		
+   
+    
